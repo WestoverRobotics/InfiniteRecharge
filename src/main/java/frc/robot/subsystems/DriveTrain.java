@@ -7,6 +7,8 @@
 
 package frc.robot.subsystems;
 
+// Moore: This is where systems, motors, controller, etc are imported from FRC Libraries.
+
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import frc.robot.commands.*;
@@ -16,6 +18,9 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
+
+// Moore: This is where motor controllers are assign to motors and gearboxes.
+
 public class DriveTrain extends SubsystemBase {
   private final VictorSP rightFront;
   private final VictorSP rightBack;
@@ -23,6 +28,8 @@ public class DriveTrain extends SubsystemBase {
   private final VictorSP leftBack;
   private final DifferentialDrive m_drive;
 
+  // Moore: This is where gearboxes and motors are grouped together.
+  
   public static SpeedControllerGroup driveTrainRightMotors;
   public static SpeedControllerGroup driveTrainLeftMotors;
 
@@ -32,6 +39,8 @@ public class DriveTrain extends SubsystemBase {
    */
   public DriveTrain() {
 
+    // Moore: Assigning motor controllers a variable and speedcontroller group.
+    
     rightFront = new VictorSP(0);
     rightBack = new VictorSP(1);
     leftFront = new VictorSP(3);
@@ -48,6 +57,8 @@ public class DriveTrain extends SubsystemBase {
     setDefaultCommand(new DriveManual(this));
   }
 
+  // Moore: This is where types of drives are detailed. Multiple can be present at one time. You have to assign specific drives.
+  
   public void tankdrive(double left, double right){
     m_drive.tankDrive(left, right);
   }
