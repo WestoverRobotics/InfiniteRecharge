@@ -9,7 +9,7 @@
 
 package frc.robot;
 
-//These are imported systems, motors, and controllers from the FRC library:
+// Moore: These are imported systems, motors, and controllers from the FRC library:
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
