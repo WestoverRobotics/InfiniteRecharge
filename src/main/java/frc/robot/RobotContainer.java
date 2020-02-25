@@ -5,8 +5,11 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
+// Moore: Use the RobotContainer to consolidate all other classes and systems into a single area to work.
+
 package frc.robot;
 
+//These are imported systems, motors, and controllers from the FRC library:
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
@@ -25,7 +28,8 @@ import frc.robot.commands.*;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-
+  // Moore: You're pulling subsystems and commands from other areas in the code to use in the RobotContainer here.
+  
   public static final XboxController m_Joystick = new XboxController(0);
 
   private final SimpleAuto m_autoCommand = SimpleAuto();
@@ -47,7 +51,7 @@ public class RobotContainer {
   //public static final XboxController.Button RIGHT_TRIGGER_BUTTON;
 
 
-
+  // Moore: This is where the buttons of the Xbox Controller are assigned a variable:
   Joystick joy1 = new Joystick(0);
   JoystickButton btn1 = new JoystickButton(joy1, 1);
   JoystickButton btn2 = new JoystickButton(joy1, 2);
