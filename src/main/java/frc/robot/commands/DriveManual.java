@@ -28,6 +28,7 @@ public class DriveManual extends CommandBase {
   }
 
   // Called every time the scheduler runs while the command is scheduled.
+  // Moore: Details of curveDrive in relation to joystick & trigger function to speed, rotation, quickturn
   @Override
   public void execute() {
   
@@ -43,6 +44,8 @@ public class DriveManual extends CommandBase {
     rotation = 0;
   }
 
+  // Moore: Calling curveDrive from DriveTrain  
+    
   m_drivetrain.curvatureDrive(speed, rotation, quickturn);
 
   //m_drivetain.tankDrive(RobotContainer.m_driverController.getRawAxis(1), RobotContainer.m_driveController.getRawAxis(5));
