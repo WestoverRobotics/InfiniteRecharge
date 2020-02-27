@@ -33,7 +33,7 @@ public class DriveManual extends CommandBase {
   public void execute() {
   
   double speed = RobotContainer.m_driveController.getRawAxis(2) - RobotContainer.m_driveController.getRawAxis(3);
-  double rotation = -RobotContainer.m_driveController.getRawAxis(0);
+  double rotation = RobotContainer.m_driveController.getRawAxis(0);
   boolean quickturn = speed > -0.2 && speed < 0.2;
 
   if( speed > -0.1 && speed < 0.1){
